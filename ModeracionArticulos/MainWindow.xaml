@@ -11,5 +11,6 @@
             
         </TextBox>
         <Button Click="Button_Click">Validar</Button>
+        <TextBlock x:Name="resultado"></TextBlock>
     </StackPanel>
 </Window>
