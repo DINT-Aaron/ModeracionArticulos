@@ -30,7 +30,8 @@ namespace ModeracionArticulos
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _apiKey);
-                var uri = $"{_endpoint}/text/moderation/v1.0/Screen?autocorrect=false&PII=false&listId=<listId>&language=eng";
+                //var uri = $"{_endpoint}/text/moderation/v1.0/Screen?autocorrect=false&PII=false&listId=<listId>&language=eng";
+                var uri = $"{_endpoint}/text/moderation/v1.0/Screen";
 
                 var content = new StringContent(JsonConvert.SerializeObject(new { text }), Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(uri, content);
